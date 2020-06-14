@@ -53,14 +53,9 @@ class Data_preprocess(object):
                     annotation_label += " " + str(x2s[label_i])
                     annotation_label += " " + str(y2s[label_i])
 
-                with open("./data/my_data/label/"+model+".txt","a") as f:
+                with open("./data/"+model+".txt","a") as f:
                     f.write(str(my_index) + " " + data_path + "/JPEGImages/" + ind + ".jpg" + " " + str(img_width) + " " + str(img_height) + annotation_label + "\n")
-                    # if model=="test":
-                    #     f.write(str(my_index+1516) + " " + data_path+"/JPEGImages/"+ind+".jpg"+" "+str(img_width) +" "+str(img_height)+ annotation_label + "\n")
-                    # elif model=="train":
-                    #     f.write(str(my_index+5456) + " " + data_path + "/JPEGImages/" + ind + ".jpg" + " " + str(img_width) + " " + str(img_height) + annotation_label + "\n")
-                    # elif model=="val":
-                    #     f.write(str(my_index+606) + " " + data_path + "/JPEGImages/" + ind + ".jpg" + " " + str(img_width) + " " + str(img_height) + annotation_label + "\n")
+         
                 my_index += 1
 
             print(my_index)
