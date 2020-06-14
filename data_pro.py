@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
     # 做YOLO V3需要的训练集
     base_path = os.getcwd()
-    data_path = os.path.join(base_path,"./data")  #根据自己存放VOC格式图片的路径进行修改
+    data_path = os.path.join(base_path,"data")  #根据自己存放VOC格式图片的路径data进行修改
 
     data_p = Data_preprocess(data_path)
     data_p.load_labels("train")
